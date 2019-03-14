@@ -34,24 +34,30 @@ function renderDiv(joke, i){
     let divNote = document.createElement('div');
     divNote.classList.add('note');
     divNote.setAttribute('style', `background:${joke.rgb}`);
+
     let divContent = document.createElement('div');
     divContent.classList.add('content');
     divContent.textContent = joke.joke;
     divNote.appendChild(divContent);
+
     let divBtns =  document.createElement('div');
     divBtns.classList.add('overlay');
     divNote.appendChild(divBtns);
+
     let btnEdit = document.createElement('button');
     btnEdit.classList.add('btn', 'btn-warning');
     btnEdit.textContent = 'edit';
     divBtns.appendChild(btnEdit);
+
     let iPencil = document.createElement('i');
     iPencil.classList.add('fa', 'fa-pencil');
     btnEdit.appendChild(iPencil);
+
     let btnDelete = document.createElement('button');
     btnDelete.classList.add('btn', 'btn-danger');
     btnDelete.textContent = 'delete';
     divBtns.appendChild(btnDelete);
+    
     let iX = document.createElement('i');
     iX.classList.add('fa', 'fa-times');
     btnDelete.appendChild(iX);
